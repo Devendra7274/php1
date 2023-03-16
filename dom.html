@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+       
+        *{
+              padding: 0;
+              margin: 0;
+        }
+          .main{
+                  width: 1366px;
+                  height: 657px;
+                  background-image: url(e.jpg);
+                  background-size:cover;
+                  background-repeat:no-repeat;
+                  padding: 0;
+                  margin: 0;
+                  
+          }
+          .navbar{
+                  width: 1366px;
+                  height: 40px;
+                  background-color: rgba(20, 2, 2, 0.418);
+                  
+                 
+
+          }
+          ul{
+             list-style: none;
+             padding: 0px 0px 0px 960px;
+             
+            
+
+          }
+          li{
+              
+              float: left;
+              padding: 10px;
+              font-size: 20px;
+              
+              
+          }
+          select{
+                  padding: 10px;
+                  font-size: 15px;
+                  
+
+          }
+          .login{
+                  width: 200px;
+                  height: 300px;
+                  background-color: rgba(2, 0, 0, 0.432);
+                  position: fixed;
+                  margin:100px 0px 0px 550px ;
+                  border-radius: 20px 0px 20px 0px;
+                  box-shadow: 10px 10px 15px red;
+          }
+          form{
+                  margin: 80px 0px 0px 10px;
+                  text-align: center;
+                  
+                  
+                  
+          }
+          li:hover{
+                    background-color: red;
+                    color: white;
+                    border-radius: 10px;
+          }
+          input{
+                 border: none;
+                 border-bottom:red;
+            
+                 border: hidden;
+                 margin: 5px;
+                 padding: 5px;
+                 
+          }
+          h1{
+               padding: 10px 0px 0px 30px;
+              
+          }
+         .login1{
+                  width: 200px;
+                  height: 30px;
+                  padding: 10px 0px 0px 25px;
+                  color: rgba(20, 19, 20, 0.699);
+
+         }
+         .login2{
+                width: 200px;
+                height: 200px;
+                padding: 0px 0px 90px 0px;
+         }
+         
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="navbar">
+        
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Gallery</li>
+            <li>Contact</li>
+          </ul>
+          <select>
+               <option value="">Log in</option>
+               <option>Sign up</option>
+          </select>
+    </div>
+    <div class="login">
+        <div class="login1"> <h1>Addition</h1></div>
+          <div class="login2">
+           <form>
+                <input type="text" placeholder="number 1" id="num1"/>
+                <br>
+                <br>
+                <input type="text" placeholder="number 2" id="num2"/>
+                <br>
+                <br>
+                <input type="text" placeholder="sum" id="sum"/>
+                
+                <input type="Submit" value="add" onclick="add()"/>
+                
+           </form>
+           </div>
+           
+    </div>
+    
+    
+
+    </div>
+    
+</body>
+<script>
+        function add()
+        {
+        let num1=Number(document.getElementById('num1').value);
+        let num2=Number(document.getElementById('num2').value);
+        let sum=num1+num2;
+        document.getElementById('sum').value=sum;
+        }  
+
+</script>
+</html>

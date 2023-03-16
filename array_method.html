@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1 id="main"></h1>
+      <button onclick="pop()">pop (delete last index)</button><br><br>
+      <button onclick="push()">push (add last index)</button><br><br>
+      <button onclick="unshift()">unshift (add first index)</button><br><br>
+      <button onclick="shift()">shift (delete first index)</button><br><br>
+      <button onclick="delet()">Delete (which index u want)</button><br><br>
+      <button onclick="sort()">Sort</button><br><br>
+</body>
+<script>
+                // array methods
+
+    //  array concat 
+
+            // var a=['a','b','c'];
+            // var b=['d','e','f'];
+            // var c=a.concat(b);
+            // document.write(c);
+          
+    // copywithin method
+    
+            //   var a=['a','b','c','d','e','f'];
+            //  document.write(a.copyWithin(2,3));
+
+
+
+    //  every
+
+    //    var arr=[1,2,3,4,5];
+    //    var b=arr.some(x)
+
+    //    function x(){
+    //         if(arr<=4)
+    //             return true;
+    //    }
+    //    document.write(b);
+
+
+//    map function
+
+
+        var arr=["ram","shyam","golu","rohit"];
+        
+         var demo=arr;
+         document.getElementById('main').innerText=demo;
+
+        function pop(){
+             demo.pop();
+              document.getElementById("main").innerText=demo;
+        }
+
+        function push(){
+                var x=prompt(" ");
+                demo.push(x)
+                document.getElementById('main').innerText=demo;
+        }
+
+        function unshift(){
+                var x=prompt("enter name for first position")
+                demo.unshift(x)
+                document.getElementById('main').innerText=demo;
+
+        }
+        function shift(){
+                
+                demo.shift()
+                document.getElementById('main').innerText=demo;
+        }
+        function delet(){
+                var x=prompt("enter index which you delete");
+                delete demo.indexOf(x);
+                document.getElementById('main').innerText=demo;
+        }
+        function sort(){
+                demo.sort()
+                document.getElementById('main').innerText=demo;
+
+        }
+
+</script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+           var array=[];
+           var index=-1;
+          
+
+            function isempty(){
+                     if(index==-1){
+                         return true;
+                     }
+                     else  {
+                          return false;
+                     }
+            }
+            function isfull(){
+                   if(index==7)
+                   {
+                      return true;
+                   } 
+                   else
+                   {  
+                       return false;   
+                   }   
+            }
+            function add(x){
+                     if(isfull()){
+                         document.write('stack overflow');
+                     }  
+                      else{
+                           index++;
+                           array[index]=x;   
+                      }
+            }
+            function remove(){
+                     if(isempty())
+                     {
+                        document.write('stack underflow');
+                     }  
+                     else{
+                         index--;
+                     }  
+            }
+            function peek(){
+                             return array[index];
+            }
+            function display(){
+                    for(let i=0;i<=index;i++)
+                    {
+                        document.write(array[i],'<br>');
+                    }
+            }
+            
+            add(12);
+            add(13);
+            add(14);
+            add(15);
+            add(16);
+            add(17);
+            add(18);
+            remove();
+            remove();
+            add(19);
+            display();
+
+</script>
+</html>
